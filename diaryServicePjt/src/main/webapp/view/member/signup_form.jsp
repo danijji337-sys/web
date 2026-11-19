@@ -6,7 +6,9 @@
 <meta charset="UTF-8">
 <jsp:include page="../include/title.jsp"/>
 
-<link href="./res/css/index.css" rel="stylesheet" type="text/css">
+<link href="./res/css/member/signup_form.css" rel="stylesheet" type="text/css">
+
+<jsp:include page="../include/member/member.jsp"/>
 
 </head>
 <body>
@@ -17,7 +19,25 @@
 	
 	<article>
 		<div class="article_warp">
-			THIS PAGE IS SIGNUP_FORM.
+			
+			<form 
+				action="<%= request.getContextPath() %>/signup_confirm.mem" 
+				name="signup_form" 
+				method="POST">
+
+				*<input class="basic_input" type="text" name="memId" placeholder="Input new memberID!!">
+				<br>
+				*<input class="basic_input" type="password" name="memPw" placeholder="Input new memberPW!!">
+				<br>
+				<input class="basic_input" type="email" name="memMail" placeholder="Input new memberMAIL!!">
+				<br>
+				<input class="basic_input" type="text" name="memPhone" placeholder="Input new memberPHONE!!">
+				<br>
+				<input class="basic_input_button" type="button" value="SIGN UP" onclick="signupForm();">
+				<input class="basic_input_button" type="reset" value="RESET" onclick="signupForm();">
+
+			</form>
+
 		</div>
 	</article>
 	
