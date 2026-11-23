@@ -57,5 +57,16 @@ create table tbl_diary (
 	primary key(diaryNo)
 ) auto_increment = 1001;
 
+alter table tbl_diary 
+drop index memId;
 
 SET GLOBAL auto_increment_increment = 3;
+
+select * from tbl_diary;
+
+-- table join
+
+select * from tbl_diary td
+join tbl_member tm
+on td.memId = tm.memId 
+where td.memId = 'chanho';
