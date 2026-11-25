@@ -7,6 +7,7 @@
 <jsp:include page="./view/include/title.jsp"/>
 
 <link rel="stylesheet" href="./res/css/index.css" type="text/css">
+
 </head>
 <body>
 
